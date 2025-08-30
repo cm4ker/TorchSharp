@@ -42,7 +42,7 @@ namespace TorchSharp
             "any";
 
         static string nativeGlob =>
-            RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? @".*\.dll(\.dll)?" :
+            RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? @".*\.dll$" :
             RuntimeInformation.IsOSPlatform(OSPlatform.OSX) ? @".*\.dylib\.*" :
             // must match
             //   lib.so
